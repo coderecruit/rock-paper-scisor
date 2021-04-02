@@ -1,5 +1,5 @@
 
-How to build this game
+How I'm approaching this problem v1 
 
 1. Make computerPlay() return Rock, Paper or Scisor 
 2. Make computerPlay() random
