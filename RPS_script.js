@@ -4,7 +4,7 @@
 // 2. Make computerPlay() random
 //
 
-function computerPlay () {
+function computerPlay() {
     let computerOptions = ["Rock", "Paper", "Scissor"];
     let random = computerOptions[Math.floor(Math.random()*computerOptions.length)];
     return random;
@@ -21,15 +21,11 @@ console.log(computerPlay());
 
 function playerSelection() {
     let playerOptions = prompt("Choose: Rock, Paper or Scissor");
-    if (playerOptions == "Rock" ) {
-        return (playerOptions);
-    } else if (playerOptions == "Paper" ) {
-        return (playerOptions);
-    } else if (playerOptions == "Scissor" ) {
+    if (playerOptions == "Rock" || playerOptions == "Paper" || playerOptions == "Scissor") {
         return (playerOptions);
     } else {
         alert ('Invalid input! Reload the page and try again');
-    }5
+    }
 }
 console.log (playerSelection());
 
@@ -48,6 +44,8 @@ if (playerSelection != "paper" || "rock" || "scissor") {
 // 5. Make playerSelection case insensitive
 //
 
+
+
 /* Right now it is accepting all values. I want it to only accept R, P or S
 
 function playerSelection() {
@@ -60,20 +58,55 @@ function playerSelection() {
         return (playerOptions);
     } else {
         alert ('Invalid input! Reload the page and try again');
-    }5
+    }
 }
 
 */
 
-
-
-
-
-
 // 6. Play a round vs computer 
 
 
+function playRound(computerPlay, playerSelection) {
+    if (playerSelection == "Paper", computerPlay == "Rock") {
+        console.log("Player wins this round");
+    }  else {
+        console.log("play again");
+    }
+}
 
+/*
+function playRound (computerPlay, playerSelection) {
+    if ( (playerSelection == "Paper" && computerPlay == "Rock") || (playerSelection == "Scissor" && computerPlay == "Paper" ) || (playerSelection == "Rock" && computerPlay == "Scissor") ) {
+        console.log("Player wins this round");
+    }  else {
+        console.log("play again");
+    }
+}
+*/
+console.log(playRound (computerPlay, playerSelection));
+
+
+
+/*
+
+// only draws work. Else if not working
+function playRound (computerPlay, playerSelection) {
+    if (computerPlay == playerSelection) {
+        console.log("Draw");
+    } else if (computerPlay === "Scissor" && playerSelection === "Paper") {
+        console.log("Computer win. Scissor beats Paper");
+    } else {
+        console.log("there was a winner");
+    }
+}
+
+
+if (computerPlay == playerSelection) {
+        console.log("Draw");
+    } else {
+        console.log("there was a winner");
+    }
+*/
 
 
 // 6.1 Decide who wins each round
