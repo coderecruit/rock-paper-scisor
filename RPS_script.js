@@ -13,30 +13,66 @@ function computerPlay () {
 console.log(computerPlay());
 
 //
-// 3. Prompt for playerSelection()
+// 3. playerSelection function
+//
+// 4. Acept only strings (R,P,S)
+// if, else if, else if, else if, else (alert)
 //
 
+function playerSelection() {
+    let playerOptions = prompt("Choose: Rock, Paper or Scissor");
+    if (playerOptions == "Rock" ) {
+        return (playerOptions);
+    } else if (playerOptions == "Paper" ) {
+        return (playerOptions);
+    } else if (playerOptions == "Scissor" ) {
+        return (playerOptions);
+    } else {
+        alert ('Invalid input! Reload the page and try again');
+    }5
+}
+console.log (playerSelection());
 
 
+/* Drafts
 let playerSelection = prompt("Choose: Rock, Paper or Scissor", "");
 
-if (playerSelection === "Paper" || "Rock" || "Scissor") {
-    console.log(playerSelection);
-} else {
+if (playerSelection != "paper" || "rock" || "scissor") {
     alert ('Invalid input! Reload the page and try again');
+} else {
+    console.log(playerSelection);
+}
+*/
+
+//
+// 5. Make playerSelection case insensitive
+//
+
+/* Right now it is accepting all values. I want it to only accept R, P or S
+
+function playerSelection() {
+    let playerOptions = prompt("Choose: Rock, Paper or Scissor");
+    if (playerOptions === "Rock" || "rock" || "ROCK" ) {
+        return (playerOptions);
+    } else if (playerOptions === "Paper" || "paper" || "PAPER" ) {
+        return (playerOptions);
+    } else if (playerOptions === "Scissor" || "scissor" || "SCISSOR" ) {
+        return (playerOptions);
+    } else {
+        alert ('Invalid input! Reload the page and try again');
+    }5
 }
 
-
-
-// 4. Acept only strings
+*/
 
 
 
 
-// 5. Make it case insensitive
 
 
 // 6. Play a round vs computer 
+
+
 
 
 
