@@ -22,6 +22,7 @@ function playerSelection() {
 
 //
 // 5. Make playerSelection case insensitive
+// still missing
 //
 
 
@@ -49,10 +50,7 @@ function playRound(computerPlay, playerSelection) {
     } 
 }
 
-// console.log (playRound(computerPlay(), playerSelection()));
-
 // 9. Play 5 rounds 
-// Use loops or repeat function 5 times
 
 for (i=0; i<5; i++) {
     console.log (playRound(computerPlay(), playerSelection()));
