@@ -65,3 +65,14 @@ if (computerPlay == playerSelection) {
         console.log("there was a winner");
     }
 */
+
+/* step 6
+ This is working, but doesn't print the computer result. And player have to put the input 2 times
+computerPlay();
+playerSelection();
+
+console.log (playRound(computerPlay(), playerSelection()));
+*/
+
+// console.log (playRound(computerPlay(), playerSelection())); is calling the functions and working. There is no need to do console.log of other functions
+

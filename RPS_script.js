@@ -26,42 +26,42 @@ function playerSelection() {
 
 
 // 6. Play a round vs computer 
-// 6.1 Decide who wins each round
+// 6.1 Decide who wins each round 
+// 7. Display result of round 
 
 function playRound (computerPlay, playerSelection) {
     if (playerSelection == "Paper" && computerPlay == "Rock" || playerSelection == "Scissor" && computerPlay == "Paper" || playerSelection == "Rock" && computerPlay == "Scissor" ) {
-        console.log("Player wins this round");
+        console.log("You win!");
     } else if ( playerSelection == "Paper" && computerPlay == "Scissor" || playerSelection == "Scissor" && computerPlay == "Rock"  || playerSelection == "Rock" && computerPlay == "Paper" ) {
-        console.log("Computer wins this round");
+        console.log("You Loose!");
     } else if (playerSelection == computerPlay){
         console.log("Draw");
     } else {
         console.log("Error. The round wasn't played");
+    } 
+}
+
+console.log (playRound(computerPlay(), playerSelection()));
+
+// 8. Keep score of rounds
+
+
+/* Not working. It's alwats printing a 1 without text.
+function roundResult (playRound) {
+    let playerWin = 0;
+    let computerWin = 0;
+    let roundDraw = 0;
+    if (playRound = "You Win") {
+        return ("Player score: ", playerWin += 1);
+    } else if (playRound = "You Lookse!") {
+        return ("Computer score: ", computerWin += 1);
+    } else {
+        return ("Draws: ", roundDraw += 1); 
     }
 }
 
-// console.log (playRound(computerPlay(), playerSelection())); is calling the functions and working. There is no need to do console.log of other functions
-
-console.log (playRound(computerPlay(), playerSelection()));
-
-
-
-/* This is working, but doesn't print the computer result. And player have to put the input 2 times
-computerPlay();
-playerSelection();
-
-console.log (playRound(computerPlay(), playerSelection()));
+console.log(roundResult(playRound()));
 */
-
-
-
-
-
-
-// 7. Display result of round
-
-
-// 8. Keep score of rounds
 
 
 /* 9. Play 5 rounds 
