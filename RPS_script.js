@@ -46,22 +46,7 @@ console.log (playRound(computerPlay(), playerSelection()));
 // 8. Keep score of rounds
 
 
-/* Not working. It's alwats printing a 1 without text.
-function roundResult (playRound) {
-    let playerWin = 0;
-    let computerWin = 0;
-    let roundDraw = 0;
-    if (playRound = "You Win") {
-        return ("Player score: ", playerWin += 1);
-    } else if (playRound = "You Lookse!") {
-        return ("Computer score: ", computerWin += 1);
-    } else {
-        return ("Draws: ", roundDraw += 1); 
-    }
-}
 
-console.log(roundResult(playRound()));
-*/
 
 
 /* 9. Play 5 rounds 
