@@ -28,6 +28,7 @@ function playerSelection() {
 // 6. Play a round vs computer 
 // 6.1 Decide who wins each round 
 // 7. Display result of round (on the console)
+// 8. Keep score of rounds
 
 let playerWin = 0;
 let computerWin = 0;
@@ -35,44 +36,24 @@ let roundDraw = 0;
 
 function playRound(computerPlay, playerSelection) {
     if (playerSelection == "Paper" && computerPlay == "Rock" || playerSelection == "Scissor" && computerPlay == "Paper" || playerSelection == "Rock" && computerPlay == "Scissor" ) {
-        console.log("You win! Player score: " + (playerWin += 1) );
+        console.log("You win! Player score: " + (playerWin += 1) + ". Computer score: " + computerWin + ". Draws: " + roundDraw );
         return playerWin;
     } else if ( playerSelection == "Paper" && computerPlay == "Scissor" || playerSelection == "Scissor" && computerPlay == "Rock"  || playerSelection == "Rock" && computerPlay == "Paper" ) {
-        console.log("You Loose! Computer score: " + (computerWin += 1) );
+        console.log("You Loose! Player score: " + playerWin + ". Computer score: " + (computerWin += 1) + ". Draws: " + roundDraw );
         return computerWin;
     } else if (playerSelection == computerPlay){
-        console.log("Draw. Draws: " + (roundDraw += 1) );
+        console.log("Draw. Player score: " + playerWin + ". Computer score: " + computerWin + ". Draws: " + (roundDraw += 1) );
         return roundDraw;
     } else {
         console.log("Error. The round wasn't played");
     } 
 }
 
-console.log (playRound(computerPlay(), playerSelection()));
-
-
-// 8. 
-// Problem: Keep score of rounds
-// Suggested solution: make the function store the result. Use return, not console.log to achieve this.
-
-
-/*
-function roundScore(playRound) {
-    let playerWin = 0;
-    let computerWin = 0;
-    let roundDraw = 0;
-    if (playRound(computerPlay(), playerSelection()) = "You Win") {
-        console.log ("Player score: ", playerWin += 1);
-    } else if (playRound(computerPlay(), playerSelection()) = "You Loose!") {
-        console.log ("Computer score: ", computerWin += 1);
-    } else if (playRound(computerPlay(), playerSelection()) = "Draw!") {
-        console.log ("Draws: ", roundDraw += 1); 
-    }
-}
-*/
-
+// console.log (playRound(computerPlay(), playerSelection()));
 
 // 9. Play 5 rounds 
 // Use loops or repeat function 5 times
 
-
+for (i=0; i<5; i++) {
+    console.log (playRound(computerPlay(), playerSelection()));
+}
