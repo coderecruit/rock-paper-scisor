@@ -27,7 +27,7 @@ function playerSelection() {
 
 // 6. Play a round vs computer 
 // 6.1 Decide who wins each round 
-// 7. Display result of round 
+// 7. Display result of round (on the console)
 
 function playRound (computerPlay, playerSelection) {
     if (playerSelection == "Paper" && computerPlay == "Rock" || playerSelection == "Scissor" && computerPlay == "Paper" || playerSelection == "Rock" && computerPlay == "Scissor" ) {
@@ -43,12 +43,16 @@ function playRound (computerPlay, playerSelection) {
 
 console.log (playRound(computerPlay(), playerSelection()));
 
-// 8. Keep score of rounds
+// 8. 
+// Problem: Keep score of rounds
+// Suggested solution: make the function store the result. Use return, not console.log to achieve this.
+
+function roundScore () {
+
+}
 
 
-
-
-
+ 
 /* 9. Play 5 rounds 
     Use loops or repeat function 5 times */
 
