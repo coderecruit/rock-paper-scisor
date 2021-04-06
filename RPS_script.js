@@ -37,20 +37,22 @@ let roundDraw = 0;
 
 function playRound(computerPlay, playerSelection) {
     if (playerSelection == "Paper" && computerPlay == "Rock" || playerSelection == "Scissor" && computerPlay == "Paper" || playerSelection == "Rock" && computerPlay == "Scissor" ) {
-        console.log("You win! Player score: " + (playerWin += 1) + ". Computer score: " + computerWin + ". Draws: " + roundDraw );
+        console.log("You win!");
+        console.log("Player score: " + (playerWin += 1) + ". Computer score: " + computerWin + ".");
         return playerWin;
     } else if ( playerSelection == "Paper" && computerPlay == "Scissor" || playerSelection == "Scissor" && computerPlay == "Rock"  || playerSelection == "Rock" && computerPlay == "Paper" ) {
-        console.log("You Loose! Player score: " + playerWin + ". Computer score: " + (computerWin += 1) + ". Draws: " + roundDraw );
+        console.log ("You Loose!");
+        console.log("Player score: " + playerWin + ". Computer score: " + (computerWin += 1) + "." );
         return computerWin;
     } else if (playerSelection == computerPlay){
-        console.log("Draw. Player score: " + playerWin + ". Computer score: " + computerWin + ". Draws: " + (roundDraw += 1) );
-        return roundDraw;
+        console.log ("Round Draw.");
+        console.log("Player score: " + playerWin + ". Computer score: " + computerWin + "." );
     } else {
         console.log("Error. The round wasn't played");
     } 
 }
 
-// 9. Play 5 rounds 
+// 9. Play until a player win 5 rounds 
 
 for (i=0; i<5; i++) {
     console.log (playRound(computerPlay(), playerSelection()));
