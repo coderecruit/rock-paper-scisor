@@ -1,8 +1,8 @@
 
 // 1. Make a function for the computer random selection return Rock, Paper or Scisor 
-// 2. Make computerPlay() random
+// 2. Make computerSelection() random
 
-function computerPlay() {
+function computerSelection() {
     let computerOptions = ["Rock", "Paper", "Scissor"];
     let random = computerOptions[Math.floor(Math.random()*computerOptions.length)];
     return random;
@@ -35,16 +35,14 @@ let playerWin = 0;
 let computerWin = 0;
 let roundDraw = 0;
 
-function playRound(computerPlay, playerSelection) {
-    if (playerSelection == "Paper" && computerPlay == "Rock" || playerSelection == "Scissor" && computerPlay == "Paper" || playerSelection == "Rock" && computerPlay == "Scissor" ) {
+function playRound(computerSelection, playerSelection) {
+    if (playerSelection == "Paper" && computerSelection == "Rock" || playerSelection == "Scissor" && computerSelection == "Paper" || playerSelection == "Rock" && computerSelection == "Scissor" ) {
         console.log("You win!");
         console.log("Player score: " + (playerWin += 1) + ". Computer score: " + computerWin + ".");
-        return playerWin;
-    } else if ( playerSelection == "Paper" && computerPlay == "Scissor" || playerSelection == "Scissor" && computerPlay == "Rock"  || playerSelection == "Rock" && computerPlay == "Paper" ) {
+    } else if ( playerSelection == "Paper" && computerSelection == "Scissor" || playerSelection == "Scissor" && computerSelection == "Rock"  || playerSelection == "Rock" && computerSelection == "Paper" ) {
         console.log ("You Loose!");
         console.log("Player score: " + playerWin + ". Computer score: " + (computerWin += 1) + "." );
-        return computerWin;
-    } else if (playerSelection == computerPlay){
+    } else if (playerSelection == computerSelection){
         console.log ("Round Draw.");
         console.log("Player score: " + playerWin + ". Computer score: " + computerWin + "." );
     } else {
@@ -54,6 +52,11 @@ function playRound(computerPlay, playerSelection) {
 
 // 9. Play until a player win 5 rounds 
 
-for (i=0; i<5; i++) {
-    console.log (playRound(computerPlay(), playerSelection()));
+let gameWinner = playerWin || computerWin;
+
+// Loop only stops when playerWin reaches 5. 
+for (i=0; gameWinner < 2; i++){
+    console.log (playRound(computerSelection(), playerSelection()));
 }
+
+

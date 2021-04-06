@@ -128,3 +128,48 @@ function roundResult (playRound) {
 
 console.log(roundResult(playRound()));
 */
+
+
+/*
+if (playerWin == 5) {
+    console.log ("The Player win the game!");
+}else if (computerWin ==5 ) {
+    console.log ("Computer wins the game!");
+} else {
+    console.log ("Error. the winner wasn't found")
+}
+    
+*/
+
+/*
+function gameWinner (playRound) {
+    for (i=0; i<5; i++) {
+        console.log (playRound(computerSelection(), playerSelection()));
+    }
+}
+*/
+
+/*
+function gameWinner (playerWin, computerWin) {
+    if (playerWin == 5) {
+        console.log ("The Player win the game!");
+    } else if (computerWin == 5) {
+        console.log ("Computer wins the game!");
+    }
+}
+*/
+
+
+/*
+let gameWinner = (playerWin) || (computerWin);
+*/
+
+/*
+if (playerWin == 5) {
+    console.log ("The Player win the game!");
+}else if (computerWin ==5 ) {
+    console.log ("Computer wins the game!");
+} else {
+    console.log ("Error. the winner wasn't found")
+}
+*/
