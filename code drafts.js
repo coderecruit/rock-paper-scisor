@@ -173,3 +173,16 @@ if (playerWin == 5) {
     console.log ("Error. the winner wasn't found")
 }
 */
+
+/* code before april 16 th
+// 9.1 Make a loop to play the rounds
+
+// Loop only stops when playerWin reaches 5(2 atm. 5 was too long to test) 
+for (i=0; gameWinner < 2; i++){
+    console.log (playRound(computerSelection(), playerSelection()));
+}
+
+
+// 9.2 Make the loop stop when a player wins 5 rounds
+let gameWinner = playerWin || computerWin;
+*/
